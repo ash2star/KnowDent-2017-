@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<!--<script src="js/mobile.js" type="text/javascript"></script>-->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
@@ -15,6 +16,51 @@
 		return false;
 	});
 	</script>
+	
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+	
 </head>
 <body>
 	<div id="page">
@@ -58,34 +104,34 @@
 					</span>
 					<span id="menu" style="float:left;margin-left:0.5%;width:59.5%;"><!--Middle Div-->
 						<form action="symptom_default1.php" method="post">
-						<table>
+						<table cellspacing="10">
 						<tr>
 						<td><label for="name" class="h4">Name      </label></td>
-						<td><input type="text" id="name" class="name" placeholder="Enter Name"></td>
+						<td><input type="text" id="name" class="name" placeholder="Enter Name" required></td>
 						</tr>
 						<tr>
 						<td><label for="name" class="h4">Gender</label></td>
-						<td><label class="radio-inline"><input type="radio" name="optradio">Male</label>
+						<td><label class="radio-inline"><input type="radio" name="optradio" checked>Male</label>
 						<label class="radio-inline"><input type="radio" name="optradio">Female</label></td>
 						</tr>
 						<tr>
 						<td><label for="name" class="h4">Age</label></td>
-						<td><button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">0-2years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">3-7years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">8-12years</a></li>
-							<li role="presentation" class="divider"></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">13-18years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">19-24years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">25-50years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">50-65years</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Above 65</a></li>
-						</ul>
-						</td>
+						<td><input list="age" name="age">
+						<datalist id="age">
+							<option value="--Select--">
+							<option value="0-2years">
+							<option value="3-7years">
+							<option value="8-12years">
+							<option value="13-18years">
+							<option value="19-24years">
+							<option value="25-50years">
+							<option value="50-65years">
+							<option value="Above 65years">
+						</datalist></td>
 						</tr>
 						<tr>
-						<td></td>
+						<td><label for="name" class="h4">Email-Id      </label></td>
+						<td><input type="email" name="email"></td>
 						</tr>
 						</table>
 						</form>
@@ -95,5 +141,28 @@
 					</span>
 				</div>
 			</div>
+			
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
