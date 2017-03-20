@@ -1,0 +1,32 @@
+ <! DOCTYPE html>
+<head>
+<script type="text/javascript">
+
+function validate()
+{
+    var checkBoxes = document.getElementsByTagName('input');
+        //alert(checkBoxes.length);
+                var param = "Values of Checkboxes:"+"\n";
+                for (var counter=0; counter < checkBoxes.length; counter++) {
+                                if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
+                                                param += checkBoxes[counter].value + "\n";
+                                }
+                }
+	alert(param);
+	document.getElementById("span1").innerHTML= param;
+}
+</script>
+</head>
+<body>
+<form method="post" name="form">
+ <input type="checkbox" value="Value1">Value1
+ <input type="checkbox" value="Value2">Value2
+ <input type="checkbox" value="Value3">Value3
+ <input type="checkbox" value="Value4">Value4
+
+ <input type="button" value="Validate"  onClick="validate();"/>
+ <input type="reset" value="Reset"/>
+ <span id="span1" class="span1"></span>
+</form>
+</body>
+</html>
