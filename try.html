@@ -59,22 +59,24 @@ function validate()
 		</div>
 		</div>
 		<div style="width:100%; border:1px solid red;">
-		<span style="width:33.32%;" id="span1" name="span1">
-			<center><h2><b>SELECT YOUR SYMPTOMS</b></h2></font></center><br>
-			<div class="container-fluid" style="1px solid red">
-				<form method="post" name="form">
-				<input type="checkbox" name="disease" value="Bleeding Gums"><b>Bleeding Gums</b><br>
-				<input type="checkbox" name="disease" value="Binge drinking"><b>Binge Drinking</b><br>
-				<input type="checkbox" name="disease" value="Broken teeth"><b>Broken Teeth</b><br>
-				<input type="checkbox" name="disease" value="Discolouration"><b>Discolouration</b><br>
-				<input type="checkbox" name="disease" value="Sensitivity"><b>Sensitivity</b><br>
+		<center><h2><b>SELECT YOUR SYMPTOMS</b></h2></font></center><br>
+		<span style="width:33.32%;float: left; margin-right:10px;" id="span1" name="span1">
+				<div class="container-fluid" style="1px solid red">
+					<form method="post" name="form">
+						<input type="checkbox" name="disease" value="Bleeding Gums"><b>Bleeding Gums</b><br>
+						<input type="checkbox" name="disease" value="Binge drinking"><b>Binge Drinking</b><br>
+						<input type="checkbox" name="disease" value="Broken teeth"><b>Broken Teeth</b><br>
+						<input type="checkbox" name="disease" value="Discolouration"><b>Discolouration</b><br>
+						<input type="checkbox" name="disease" value="Sensitivity"><b>Sensitivity</b><br>
 
-				<input type="button" onClick="validate();" value="Print" />
-				</form>
-			</div>
+						<input type="button" onClick="validate();" value="Print" />
+					</form>
+				</div>
 		</span>
-		<span style="1px solid red;" width="100%" id="span2" class="span2">
+		<span style="1px solid black; float: left;" width="33.33%" id="span2" class="span2">
 		</span>
+		</div>
+		
 		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
