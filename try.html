@@ -15,7 +15,7 @@ function validate()
 {
 	var checkBoxes = document.getElementsByTagName('input');
         alert(checkBoxes.length);
-                var param = "Values of Checkboxes:"+"\n";
+                var param = "Symptoms Selected By You:"+"\n";
                 for (var counter=0; counter < checkBoxes.length; counter++) {
                                 if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
                                                 param += checkBoxes[counter].value + "\n";
@@ -69,7 +69,7 @@ function validate()
 				<input type="checkbox" name="disease" value="Discolouration"><b>Discolouration</b><br>
 				<input type="checkbox" name="disease" value="Sensitivity"><b>Sensitivity</b><br>
 
-				<input type="submit" onclick="validate();" value="Print" />
+				<input type="button" onClick="validate();" value="Print" />
 				</form>
 			</div>
 		</span>
