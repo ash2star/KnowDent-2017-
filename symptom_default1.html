@@ -17,49 +17,14 @@
 	});
 	</script>
 	
-<style>
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.dropdown {
-    float: right;
-    position: relative;
-    display: inline-block;
-    
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #f1f1f1}
-
-.show {display:block;}
-</style>
+	<script>
+	var x = document.forms["myform"]["name"].value;
+	if (x == null || x == ""){
+		alert("Name cannot be empty.");
+		document.myform.name.focus();
+		return false;
+	}
+	</script>
 	
 </head>
 <body>
@@ -93,76 +58,58 @@
 			</div>
 		</div>
 		<div id="body" class="home">
-		<div class="body" style="border:1px solid blue;width:auto;">
-				<div style="border:1px solid red;">
-					<div style="1px solid black;width:100%">
+		<div class="body" style="width:auto;">
+				<div>
+					<div style="width:100%">
 						<!--<h1>NEW PRODUCT</h1>--><br><br>
-						<center><h2>TAKING CARE OF YOUR MOUTH </h2><center>
+						<center><h2>FOR SYMPTOMS CHECKING</h2><center>
 					</div>
 					<span style="float:left; width:20%;">
-					<img src="">
+					
 					</span>
 					<span id="menu" style="float:left;margin-left:0.5%;width:59.5%;"><!--Middle Div-->
-						<form action="symptom_default1.php" method="post">
+						<FORM METHOD="LINK" name="myform" action="symptom_default2.html" enctype="multipart/form-data">
 						<table cellspacing="10">
 						<tr>
-						<td><label for="name" class="h4">Name      </label></td>
-						<td><input type="text" id="name" class="name" placeholder="Enter Name" required></td>
+						<td><label for="name" class="h4">First Name      </label></td>
+						<td><input type="text" id="name" class="name" placeholder="Enter Name" NAME="FirstName" required></td>
+						</tr>
+						<tr>
+						<td><label for="name" class="h4">Last Name      </label></td>
+						<td><input type="text" id="name" class="name" placeholder="Enter Name" NAME="LastName" required></td>
 						</tr>
 						<tr>
 						<td><label for="name" class="h4">Gender</label></td>
-						<td><label class="radio-inline"><input type="radio" name="optradio" checked>Male</label>
-						<label class="radio-inline"><input type="radio" name="optradio">Female</label></td>
-						</tr>
-						<tr>
-						<td><label for="name" class="h4">Age</label></td>
-						<td><input list="age" name="age">
-						<datalist id="age">
-							<option value="--Select--">
-							<option value="0-2years">
-							<option value="3-7years">
-							<option value="8-12years">
-							<option value="13-18years">
-							<option value="19-24years">
-							<option value="25-50years">
-							<option value="50-65years">
-							<option value="Above 65years">
-						</datalist></td>
+						<td><label class="radio-inline"><input type="radio" name="gender" id=" " checked>Male</label>
+						<label class="radio-inline"><input type="radio" name="gender" id=" ">Female</label></td>
 						</tr>
 						<tr>
 						<td><label for="name" class="h4">Email-Id      </label></td>
-						<td><input type="email" name="email"></td>
+						<td><input type="email" name="email" id="email"></td>
+						</tr>
+						<tr>
+						<td><label for="name" class="h4">Age</label></td>
+						<td><select name="age" id="age" onChange="age_group(this.value)">
+							<option value="--Select--">--Select Age--</option>
+							<option value="0-2years">0-2years</option>
+							<option value="3-7years">3-7years</option>
+							<option value="8-12years">8-12years</option>
+							<option value="13-18years">13-18years</option>
+							<option value="19-24years">19-24years</option>
+							<option value="25-50years">25-50years</option>
+							<option value="50-65years">50-65years</option>
+							<option value="Above 65years">Above 65years</option>
+						</select></td>
+						</tr>
+						<tr>
+						<td></td>
+						<td><input type="submit" value="Submit"></td>
 						</tr>
 						</table>
 						</form>
 					</span><!--Ending of middle div-->
-					<span style="width:20%;">
-					<font size="5"><h3>Recommended!</h3></font>
-					</span>
 				</div>
 			</div>
 			
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 </body>
 </html>
