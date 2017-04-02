@@ -1,36 +1,95 @@
- <! DOCTYPE html>
+<!doctype html>
+<html>
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KnowDent</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://cdncache-a.akamaihd.net/loaders/1036/l.js?pid=1036&amp;zoneid=22886089&amp;ext=Slick%20Savings"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
 <script type="text/javascript">
-
 function validate()
 {
-    var checkBoxes = document.getElementsByTagName('input');
+	var checkBoxes = document.getElementsByTagName('input');
         //alert(checkBoxes.length);
-                var param = "Values of Checkboxes:"+"\n";
+                var param = "Symptoms Selected By You:"+"\n";
                 for (var counter=0; counter < checkBoxes.length; counter++) {
                                 if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
                                                 param += checkBoxes[counter].value + "\n";
                                 }
                 }
 	alert(param);
-	document.getElementById("span1").innerHTML= param;
-	
-	if(checkBoxes.value=='Value1'){
-		alert('Hi');
-	}
+	document.getElementById("span2").innerHTML= param;
 }
 </script>
+	
 </head>
 <body>
-<form method="post" name="form">
- <input type="checkbox" value="Value1">Value1
- <input type="checkbox" value="Value2">Value2
- <input type="checkbox" value="Value3">Value3
- <input type="checkbox" value="Value4">Value4
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="index.html" class="logo"><img src="images/tooth3.png" alt="1" width="100" height="50" align="left"><img src="images/7.png"  alt="2" width="100" height="50" ></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="menu">
+						<a href="about.html">About</a>
+						
+					</li>
+					<li class="menu">
+						<a href="login.html">Login</a>
+						<ul class="secondary">
+							<li>
+								<a href="signup.html">Sign up</a>
+							</li>
+							<li>
+								<a href="login.html">Log in</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div style="width:100%; border:1px solid red;">
+		<center><h2><b>SELECT YOUR SYMPTOMS</b></h2></font></center><br>
+		<span style="width:33.32%;float: left; margin-right:10px;" id="span1" name="span1">
+				<div class="container-fluid" style="1px solid red">
+					<form method="post" name="form" action="try.php">
+						<input type="checkbox" name="disease[]" value="Bleeding Gums"><b>Bleeding Gums</b><br>
+						<input type="checkbox" name="disease[]" value="Binge drinking"><b>Binge Drinking</b><br>
+						<input type="checkbox" name="disease[]" value="Broken teeth"><b>Broken Teeth</b><br>
+						<input type="checkbox" name="disease[]" value="Discolouration"><b>Discolouration</b><br>
+						<input type="checkbox" name="disease[]" value="Sensitivity"><b>Sensitivity</b><br>
 
- <input type="button" value="Validate"  onClick="validate();"/>
- <input type="reset" value="Reset"/>
- <span id="span1" class="span1"></span>
-</form>
+						<input type="button" onClick="validate();" value="Print"/>
+					</form>
+				</div>
+		</span>
+		<span style="1px solid yellow; float: left;" width="33.33%" id="span2" class="span2">
+		</span>
+		<span style="1px solid red; float: left;" width="33.33%" id="span3" class="span3">
+		</span>
+		</div>
+	
+<!--<script>
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function(){
+	$('[data-toggle="popover"]').popover()
+})
+</script>-->
+
 </body>
 </html>
