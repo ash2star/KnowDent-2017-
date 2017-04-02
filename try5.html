@@ -1,0 +1,68 @@
+<head>
+ <!-- <script type="text/javascript">
+   window.onload = function () {
+		var url = document.location.href,
+			params = url.split('?')[1].split('&'),
+			data = {}, tmp;
+		for (var i = 0, var l = params.length; i < l; i++) {
+			tmp = params[i].split('=');
+			data[tmp[0]] = tmp[1];
+		}
+		document.getElementById('here').innerHTML = data.name;
+	}
+   </script>
+</head>
+
+<body>
+
+<form name="form1" action="try5.html" method="get">
+<table>
+    <tr>
+        <td id="here"></td>
+    </tr>
+</table>
+</form>
+-->
+</head>
+<body>
+<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+	theleft = str.indexOf("=") + 1;
+	theright = str.lastIndexOf("&");
+	return(str.substring(theleft, theright));
+}
+document.write("First Name is " +delineate(text));
+
+var locate = window.location
+document.joe.burns.value = locate
+var text = document.joe.burns.value
+
+function delineate2(str)
+{
+	point = str.lastIndexOf("=");
+	return(str.substring(point+1,str.length));
+}
+document.write("Last Name is " +delineate2(text));
+</SCRIPT>
+<!--
+<FORM NAME="bull">
+Last Name: <INPUT TYPE="text" NAME="bear">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+var zork = delineate2(text)
+document.bull.bear.value = zork
+</SCRIPT> -->
+</body>
+</html>
