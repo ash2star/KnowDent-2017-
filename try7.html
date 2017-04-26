@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+	theleft = str.indexOf("=") + 1;
+	theright = str.lastIndexOf("&");
+	return(str.substring(theleft, theright));
+}
+document.write("First Name is " +delineate(text));
+document.write("\n");
+
+var locate = window.location
+document.joe.burns.value = locate
+var text = document.joe.burns.value
+
+/*function delineate2(str)
+{
+	point1 = str.indexOf("&") + 1;
+	point2 = str.lastIndexOf("=");
+	return(str.substring(point1,point2));
+}
+document.write("Last Name is " +delineate2(text));
+
+function delineate3(str)
+{
+	point3 = str.lastIndexOf("&");
+	point4 = str.indexOf("=") + 1;
+	return(str.substring(point3,point4));
+}
+document.write("Age is " +delineate3(text));
+*/
+function delineate4(str)
+{
+	point5 = str.lastIndexOf("=");
+	return(str.substring(point5+1,str.length));
+}
+document.write("\n Age is " +delineate4(text));
+</SCRIPT>
+<!--
+<FORM NAME="bull">
+Last Name: <INPUT TYPE="text" NAME="bear">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+var zork = delineate2(text)
+document.bull.bear.value = zork
+</SCRIPT> -->
+</body>
+</html>
