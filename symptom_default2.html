@@ -12,52 +12,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
-<!--<script type="text/javascript">
-function validate()
-{
-	var checkBoxes = document.getElementsByTagName('input');
-        //alert(checkBoxes.length);
-                var param = "Symptoms Selected By You:"+"\n";
-                for (var counter=0; counter < checkBoxes.length; counter++) {
-                                if (checkBoxes[counter].type.toUpperCase()=='CHECKBOX' && checkBoxes[counter].checked == true) {
-                                                param += checkBoxes[counter].value + "\n";
-                                }
-                }
-	alert(param);
-	document.getElementById("span2").innerHTML= param;
-	
-	var c=document.getElementById("bleed");
-    var e=document.getElementById("drink");
-    var f=document.getElementById("brokenteeth");
-    var g=document.getElementById("decolour");
-	var h=document.getElementById("sensitive");
-
-    if(c.checked &&
-		!e.checked &&
-		!f.checked &&
-		!g.checked) 
-		{
-			document.getElementById("span3").innerHTML = "C Chord";
-		}
-                                                        
-
-    else 
-	if(c.checked &&
-		e.checked &&
-		!g.checked &&
-		!f.checked) 
-		{
-			document.getElementById("span3").innerHTML = "<b>D Chord</b>";
-		}
-
-    else {
-		alert("Under Development!");
-	}
-	
-	
-}
-</script>-->
-	
 </head>
 <body>
 	<div id="page">
@@ -66,7 +20,7 @@ function validate()
 				<a href="index.html" class="logo"><img src="images/tooth3.png" alt="1" width="100" height="50" align="left"><img src="images/7.png"  alt="2" width="100" height="50" ></a>
 				<ul id="navigation">
 					<li class="selected">
-						<a href="index.html">Home</a>
+						<a href="index2.html">Home</a>
 					</li>
 					<li class="menu">
 						<a href="about.html">About</a>
@@ -108,7 +62,7 @@ function delineate(str)
 	theright = str.lastIndexOf("&");
 	return(str.substring(theleft, theright));
 }
-document.write("First Name is " +delineate(text));
+document.write("Name is " +delineate(text));
 document.write("\n");
 
 var locate = window.location
@@ -127,9 +81,10 @@ document.write("\n Age is " +delineate4(text));
 		<span style="width:20%; float:left; margin-right:10px;" id="span1" name="span1">
 				
 		</span>
-		<span style="border:1px solid yellow; float:left; width:60%;" id="span2" class="span2">
+		<span style="float:left; width:60%;" id="span2" class="span2">
 			<div class="container-fluid" style="1px solid red">
-				<form method="post" name="form" action="symptom_default3.html">
+				<center><a href="symptom_default3.html">Skip</a></center>
+				<form method="LINK" name="form" action="symptom_default3.html" enctype="multipart/form-data">
 						<p>Here is a list of symptoms and its better understanding.</p>
 						<h3>1.White Tongue</h3>
 						<p> Whitening of the top layer of the tongue or the presence of white spots or patches on the tongue can be seen with infection, irritation, or chronic inflammation of the surface of the tongue.</p>
@@ -198,11 +153,29 @@ document.write("\n Age is " +delineate4(text));
 						<center><img src="images/rg.jpg" style="width:200px;"></center>
 						<br>
 						<br>
+						
+						<h3>12.Mouth sore.</h3>
+						<p> Mouth ulcers — also known as canker sores — are normally small, painful lesions that develop in your mouth or at the base of your gums.</p>
+						<center><img src="images/ms.jpg" style="width:200px;"></center>
+						<br>
+						<br>
+						
+						<h3>13.Tenderness.</h3>
+						<p>A thermal burn of the mouth or tongue can cause pain, blisters, peeling skin, and temporary loss of taste. Canker sore symptoms begin with a tingling sensation, followed by a red bump that becomes an ulcer.</p>
+						<br>
+						<br>
+						
+						<h3>13.Problems in brushing.</h3>
+						<p>Pain, blisters, peeling skin, and temporary loss of taste may be the beginning of a tingling sensation, followed by a red bump that becomes an ulcer.</p>
+						<br>
+						<br>
+						
+						
 					<center><input type="button" value="Done"/></center>
 				</form>
 			</div>
 		</span>
-		<span style="1px solid red; float:left; width:20%;" id="span3" class="span3">
+		<span style="float:left; width:20%;" id="span3" class="span3">
 		</span>
 		</div>
 	

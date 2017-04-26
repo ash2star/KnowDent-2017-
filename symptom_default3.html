@@ -44,6 +44,13 @@ function validate()
 	var p=document.getElementById("foulsmell") 
 	var q=document.getElementById("decolour");
 	
+	if(a.checked && b.checked && c.checked && d.checked && e.checked && f.checked && g.checked && h.checked && i.checked && j.checked && k.checked && l.checked && m.checked && n.checked && o.checked && p.checked && q.checked)
+		{
+			document.getElementById("span3").innerHTML = "<h3><b>Please Check your Symptoms</b></h3>";
+			document.getElementById("div_preventive").innerHTML = "Please visit your Dentist at the earliest";
+		}
+		
+	else
 	if(a.checked && !b.checked && !c.checked && !d.checked && !e.checked && !f.checked && !g.checked && !h.checked && !i.checked && !j.checked && !k.checked && !l.checked && !m.checked && !n.checked && !o.checked && !p.checked && !q.checked) 
 		{
 			document.getElementById("span3").innerHTML = "<h3><b>You may be Suffering Of:</b></h3><br><b>Whiteness of Tongue</b>";
@@ -128,15 +135,8 @@ function validate()
 			document.getElementById("div_preventive").innerHTML = "<br><br><br><br><h3><b>How Can you prevent Discolouration.</b></h3><li>Brushing your teeth after every meal will help to prevent some stains.  </li><br><li>Dentists recommend that you rinse your mouth with water after having wine, coffee or other drinks or foods that can stain your teeth</li><br><li>Regular cleanings by a dental hygienist also will help to remove surface stains.</li><br></ul>";
 		}
 	
-	else 
-	if(a.checked && b.checked && c.checked && d.checked && e.checked && f.checked && g.checked && h.checked && i.checked && j.checked && k.checked && l.checked && m.checked && n.checked && o.checked && p.checked && q.checked)
-		{
-			document.getElementById("span3").innerHTML = "<h3><b>Please Check your Symptoms</b></h3>";
-			document.getElementById("div_preventive").innerHTML = "Please visit your Dentist at the earliest";
-		}
-		
     else {
-		alert("on Development!");
+		alert("Please select the appropriate symptoms!");
 	}
 	
 	
@@ -182,7 +182,7 @@ function validate()
               service.nearbySearch({
                 location: myLocation,
                 radius: 4000,
-                types: ['hospital']
+                types: ['hospital', 'dental']
               }, processResults);
 
             }
